@@ -15,7 +15,7 @@ export function activate(context: ExtensionContext) {
         command: "vrl_lsp",
     }
 
-	execSync("cargo install vrl_lsp");
+	execSync("cargo install --git https://github.com/arshiyasolei/vrl-lsp.git");
 	// Options to control the language client
 	const clientOptions: LanguageClientOptions = {
 		// Register the server for vrl documents
