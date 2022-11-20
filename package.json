@@ -4,10 +4,11 @@
 	"author": "Arshia Soleimani",
 	"license": "MIT",
 	"publisher": "arshiyasolei",
-	"version": "0.0.2",
+	"version": "0.1.0",
 	"categories": [],
 	"keywords": [
-		"vector", "vector remap language"
+		"vector",
+		"vector remap language"
 	],
 	"engines": {
 		"vscode": "^1.63.0"
@@ -19,12 +20,12 @@
 	"contributes": {
 		"languages": [
 			{
-			  "id": "vrl",
-			  "extensions": [
-				".vrl"
-			  ]
+				"id": "vrl",
+				"extensions": [
+					".vrl"
+				]
 			}
-		  ]
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
