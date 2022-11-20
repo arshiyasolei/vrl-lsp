@@ -3,6 +3,7 @@
 	"description": "A language server/client for Vector Remap Language.",
 	"author": "Arshia Soleimani",
 	"license": "MIT",
+	"publisher": "arshiyasolei",
 	"version": "0.0.1",
 	"categories": [],
 	"keywords": [

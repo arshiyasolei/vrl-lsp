@@ -2,6 +2,7 @@
 	"name": "vrl-client",
 	"description": "VSCode part of Vrl language server",
 	"author": "Arshia Soleimani",
+	"publisher": "arshiyasolei",
 	"license": "MIT",
 	"version": "0.0.1",
 	"engines": {

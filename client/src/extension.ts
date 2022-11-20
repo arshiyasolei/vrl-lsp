@@ -1,6 +1,6 @@
 
 import { workspace, ExtensionContext } from 'vscode';
-import { execSync } from 'child_process';
+import { exec, execSync } from 'child_process';
 import {
 	LanguageClient,
 	LanguageClientOptions,
@@ -12,10 +12,14 @@ let client: LanguageClient;
 
 export function activate(context: ExtensionContext) {
 	const serverOptions: ServerOptions =  {
-        command: "vrl_lsp",
+        command: "vrl-lsp",
     }
-
-	execSync("cargo install --git https://github.com/arshiyasolei/vrl-lsp.git");
+	// TODO: improve the installation ergonomics. 
+	try {
+		execSync("vrl-lsp");	
+	} catch {
+		throw "vrl-lsp is not installed. Install it via: cargo install --git https://github.com/arshiyasolei/vrl-lsp.git"
+	}
 	// Options to control the language client
 	const clientOptions: LanguageClientOptions = {
 		// Register the server for vrl documents
