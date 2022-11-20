@@ -1,5 +1,7 @@
 A language server/client for Vector Remap Language. 
 
-Currently, we require ```cargo``` to be installed on user machine.
-
+To install the server, run
+```
+cargo install --git https://github.com/arshiyasolei/vrl-lsp.git
+```
 
