@@ -1,10 +1,10 @@
 {
 	"name": "vrl-lsp",
-	"description": "A language server/client for Vector Remap Language.",
+	"description": "A basic language server/client for Vector Remap Language.",
 	"author": "Arshia Soleimani",
 	"license": "MIT",
 	"publisher": "arshiyasolei",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"categories": [],
 	"keywords": [
 		"vector", "vector remap language"
