@@ -1,0 +1,18 @@
+[package]
+name = "vrl-lsp"
+version = "0.0.1"
+edition = "2021"
+authors = ["Arshia Soleimani"]
+description = "Language server for Vrl (Vector Remap Language). "
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+vrl = { git = "https://github.com/vectordotdev/vector/" , rev = "408b59e0c81273d913664d7582c26e569561c95f" }
+tower-lsp = { git = "https://github.com/ebkalderon/tower-lsp" , rev = "6ffb9c5f231c834e47f806d4658688968a9e1678" }
+vrl-stdlib = { git = "https://github.com/vectordotdev/vector/", rev = "408b59e0c81273d913664d7582c26e569561c95f" }
+tokio = { version = "1.21.2",  features = ["full"] }
+crossbeam-channel = "0.5.6"
+codespan-lsp =  "0.11.1"
+codespan-reporting = "0.11"

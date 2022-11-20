@@ -1,0 +1,44 @@
+{
+	"name": "vrl-lsp",
+	"description": "A language server/client for Vector Remap Language.",
+	"author": "Arshia Soleimani",
+	"license": "MIT",
+	"version": "0.0.1",
+	"categories": [],
+	"keywords": [
+		"vector", "vector remap language"
+	],
+	"engines": {
+		"vscode": "^1.63.0"
+	},
+	"activationEvents": [
+		"onLanguage:vrl"
+	],
+	"main": "./client/out/extension",
+	"contributes": {
+		"languages": [
+			{
+			  "id": "vrl",
+			  "extensions": [
+				".vrl"
+			  ]
+			}
+		  ]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -b",
+		"watch": "tsc -b -w",
+		"lint": "eslint ./client/src --ext .ts,.tsx",
+		"postinstall": "cd client && npm install && cd .."
+	},
+	"devDependencies": {
+		"@types/mocha": "^9.1.0",
+		"@types/node": "^16.11.7",
+		"@typescript-eslint/eslint-plugin": "^5.42.0",
+		"@typescript-eslint/parser": "^5.42.0",
+		"eslint": "^8.26.0",
+		"mocha": "^9.2.1",
+		"typescript": "^4.8.4"
+	}
+}
