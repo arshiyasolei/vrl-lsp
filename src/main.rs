@@ -83,8 +83,8 @@ impl LanguageServer for Backend {
     async fn did_change(&self, params: DidChangeTextDocumentParams) {
         let txt = params.content_changes[0].text.clone();
         let diagnostics = {
-            let fns = vrl_stdlib::all();
-            let res = vrl::compile(txt.as_str(), &fns);
+            let fns = vrl::stdlib::all();
+            let res = vrl::compiler::compile(txt.as_str(), &fns);
             if let Err(e) = res {
                 Some(e)
             } else {
@@ -105,8 +105,8 @@ impl LanguageServer for Backend {
     async fn did_open(&self, params: DidOpenTextDocumentParams) {
         let txt = params.text_document.text.clone();
         let diagnostics = {
-            let fns = vrl_stdlib::all();
-            let res = vrl::compile(txt.as_str(), &fns);
+            let fns = vrl::stdlib::all();
+            let res = vrl::compiler::compile(txt.as_str(), &fns);
             if let Err(e) = res {
                 Some(e)
             } else {
